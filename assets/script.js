@@ -20,16 +20,25 @@ function search(q){
         for (i=0;i<data.results.length;i++){
             // creates and displays title cards
             let titleEl = document.createElement('div');
-            titleEl.classList = 'card-title col-12 bg-secondary text-light rounded'
-            titleEl.textContent = data.results[i].title;
+            titleEl.classList = 'col-12 bg-secondary text-light rounded'
+            // creates anchor for link to article
+            let anchorEl = document.createElement('a');
+            anchorEl.setAttribute('href', data.results[i].url)
+            anchorEl.textContent = data.results[i].title;
+
+            // styles anchor
+            anchorEl.classList = 'text-light'
+
+            // adds title card to page
             resultEl.appendChild(titleEl);
+            titleEl.appendChild(anchorEl)
 
             // Create info elements
             let infoEl = document.createElement('div');
             let dateEl = document.createElement('p');
             let subjectEl = document.createElement('p');
             let descEl = document.createElement('p');
-            infoEl.classList = 'card-text bg-info';
+            infoEl.classList = 'card-text bg-info rounded';
 
             // text info
             dateEl.innerHTML = 'date: ' + data.results[i].timestamp;
@@ -53,6 +62,8 @@ buttonEl.addEventListener('click', function(e){
     if(question){
         console.log(question)
         search(question)
+    } else {
+        alert('please enter a valid search')
     }
     resultEl.textContent = '';
     searchEl.value = '';
