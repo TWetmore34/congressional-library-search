@@ -11,10 +11,10 @@
         <p class="text-light p-2">Search through the libraries of congress from the comfort of your home! <br> or your local library :)</p>
     </header>
     <body>
-        <div class="row">
-            <div class="card col-3 ml-4">
+        
+            <div class="card col-lg-3 col-sm-10 ml-4 m-sm-auto">
                 <!-- text search -->
-                <h3 class="card-title text-center mt-2">Search the Library</h3>
+                <h3 class="card-title text-center mt-2 mb-4">Search the Library</h3>
                 <label for="search" class="card-text">Enter a title</label>
                 <input type="search" name="search" id="name-search">
                 <!-- look up bootstrap button classes -->
@@ -24,18 +24,18 @@
                 <label for="format" class="card-text">Format</label>
                 <select name="format" id="format" class="mb-2">
                     <option value="" disabled selected>--</option>
-                    <option value="Maps">Maps</option>
-                    <option value="Audio">Audio</option>
-                    <option value="Photos">Photos</option>
-                    <option value="Manuscripts">Manuscripts</option>
-                    <option value="Newspapers">Newspapers</option>
-                    <option value="Film and Videos">Film and Videos</option>
-                    <option value="Notated Music">Notated Music</option>
-                    <option value="Websites">Websites</option>
+                    <option value="maps">Maps</option>
+                    <option value="audio">Audio</option>
+                    <option value="photos">Photos</option>
+                    <option value="manuscripts">Manuscripts</option>
+                    <option value="newspapers">Newspapers</option>
+                    <option value="film-and-videos">Film and Videos</option>
+                    <option value="notated-music">Notated Music</option>
+                    <option value="websites">Websites</option>
                 </select>
                 <button id="submit">Search!</button>
             </div>
-            <div class="col-8 vh-auto">
+            <div class="col-sm-10 vh-auto col-lg-8 m-sm-auto">
                 <h2 class="text-center">Results</h2>
                 <div id="results">
                     <div class="card-title col-12 bg-secondary text-light rounded">Article Name</div>
@@ -47,7 +47,7 @@
                 </div>
             </div>
 
-        </div>
+        
         <script src="./assets/script.js"></script>
     </body>
 </html>
